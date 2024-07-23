@@ -184,6 +184,7 @@
   {{- with $og_image -}}
   <meta property="og:image" content="{{.}}">
   <meta property="twitter:image" content="{{.}}">
+  <meta property="og:image:type" content="image/png">
   {{- end -}}
   <meta property="og:locale" content="{{ site.LanguageCode | default "en-us" }}">
   {{ if .IsPage }}
