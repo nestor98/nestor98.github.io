@@ -9,14 +9,14 @@ title = "Nestor Monzon"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseURL = "/"
+baseURL = "https://nestor98.github.io/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
 copyright = "Copyright &copy; {year}"
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-123456-78" # example: UA-123456-78, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+googleAnalytics = "" # example: UA-123456-78, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
 
 ############################
 ## Advanced options below ##
