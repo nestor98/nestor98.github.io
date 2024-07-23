@@ -31,8 +31,8 @@ show_logo = true
 # Enable global source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
 highlight = true
-highlight_languages = ["bibtex"]  # Add support for highlighting additional languages
-highlight_style = "github-dark"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+highlight_languages = ["properties", "python"]  # Add support for highlighting additional languages
+highlight_style = "base16-atlas-min"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable global LaTeX math rendering?
 #   If false, you can enable it locally on a per page basis.
