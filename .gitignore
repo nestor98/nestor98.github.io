@@ -34,9 +34,6 @@ hugo.linux
 
 # End of https://www.toptal.com/developers/gitignore/api/hugo
 
-themes/m10c
-
-themes/theme-academic-cv
-
 themes/academia-hugo/exampleSite/
-
+themes/academia-hugo/images
+themes/academia-hugo/.gitignore
