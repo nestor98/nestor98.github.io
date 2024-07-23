@@ -33,7 +33,7 @@ featured: true
 links:
 # - name: "bibtex"
 #   url: 'https://scholar.googleusercontent.com/scholar.bib?q=info:cAoIP-ipQIYJ:scholar.google.com/&output=citation&scisdr=ClHmFgBDEMP81zBi46w:AFWwaeYAAAAAZp5k-6xqvKyy3GmByMw_kl3BAtU&scisig=AFWwaeYAAAAAZp5k--Yg-4Q2f7sa2rDQ4o-MEng&scisf=4&ct=citation&cd=-1&hl=en'
-url_pdf: "https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.15009"
+url_pdf: "https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.15009"
 # url_code: ''
 # url_dataset: ''
 # url_poster: ''
