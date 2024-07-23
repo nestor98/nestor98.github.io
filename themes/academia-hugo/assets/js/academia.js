@@ -75,7 +75,7 @@
       if (target.length) {
         html_body.animate({
           scrollTop: target.offset().top - navbar_offset
-        }, 1500, 'easeInOutExpo');
+        }, 500, 'easeInOutExpo');
         return false;
       }
     }
