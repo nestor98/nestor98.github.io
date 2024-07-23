@@ -15,10 +15,10 @@ day_night = true
 font = "classic"
 
 # Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "Nestor's personal site"
+description = "Nestor's site"
 
 # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = "treepfp3.png"
+sharing_image = "treepfp-circle-256.png"
 
 # Twitter username (without @). Used when a visitor shares your site on Twitter.
 twitter = ""
