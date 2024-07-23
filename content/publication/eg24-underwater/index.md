@@ -75,8 +75,8 @@ Click the *Slides* button above to demo academia's Markdown slides feature.
 Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/). -->
 
 ## Bibtex
- ```bibtex
-  @article{https://doi.org/10.1111/cgf.15009,
+ ```properties
+  @article{ monzon24underwater,
       author = {Monzon, Nestor and Gutierrez, Diego and Akkaynak, Derya and Muñoz, Adolfo},
       title = {Real-Time Underwater Spectral Rendering},
       journal = {Computer Graphics Forum},
