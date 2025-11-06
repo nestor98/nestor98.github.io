@@ -1,7 +1,5 @@
-# All web crawlers
 User-agent: *
 
-# Allow all major crawlers to access all content
 Allow: /
 
 Sitemap: https://nestor98.github.io/sitemap.xml
