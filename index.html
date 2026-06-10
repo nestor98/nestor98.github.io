@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestor Monzon</title>
+    
+    <link rel="icon" type="image/png" href="static/icons/logo.png">
+    
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-200 font-sans leading-relaxed">
+
+    <nav class="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="static/icons/logo.png" alt="Logo" class="h-16 w-16 object-contain rounded p-1">
+                </div>
+                
+                <div class="hidden md:flex flex-1 items-center justify-end mr-6">
+                    <div class="flex items-baseline space-x-6">
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#publications" class="nav-link">Publications</a>
+                        <a href="#supervision" class="nav-link">Supervision</a>
+                        <a href="#teaching" class="nav-link">Teaching</a>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    
+   <button onclick="toggleTheme()" 
+    class="p-2 rounded-full hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors focus:outline-none" 
+    aria-label="Toggle Dark Mode">
+
+    <span class="block dark:hidden">
+        <img src="static/icons/sun.svg" width="20" height="20" class="icon" alt="Light mode">
+    </span>
+    
+    <span class="hidden dark:block">
+        <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#e2e8f0;" aria-hidden="true">
+            <path d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </svg>
+    </span>
+
+</button>
+                        </button>
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <div class="px-4 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-light dark:hover:text-primary-dark">About</a>
+                <a href="#publications" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-light dark:hover:text-primary-dark">Publications</a>
+                <a href="#supervision" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-light dark:hover:text-primary-dark">Supervision</a>
+                <a href="#teaching" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md font-medium hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-light dark:hover:text-primary-dark">Teaching</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 space-y-16 md:space-y-24">
+
+<section id="about" class="scroll-mt-24">
+    
+    <div class="w-full rounded-2xl p-6 md:p-8">
+        
+        <!-- Title -->
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-6">
+            Nestor Monzon
+        </h2>
+
+        <!-- Main layout -->
+        <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
+
+            <!-- Profile image -->
+            <img
+                src="static/images/nestor.jpg"
+                alt="Nestor Monzon"
+                class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover shadow-md bg-slate-200 dark:bg-slate-800 shrink-0"
+            >
+
+            <!-- Content -->
+            <div class="flex-1 space-y-4 text-center md:text-left">
+                <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    I'm a PhD student at the Graphics and Imaging Lab at the University of Zaragoza.
+                    I'm under the supervision of
+                    <a href="http://giga.cps.unizar.es/~diegog"
+                       class="link-primary hover:underline">
+                        Diego Gutierrez
+                    </a>
+                    and
+                    <a href="https://webdiis.unizar.es/~amunoz"
+                       class="link-primary hover:underline">
+                        Adolfo Muñoz
+                    </a>.
+                </p>
+                <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    My research interests include light transport simulation and forward/inverse rendering,
+                    especially participating media. I also work on variance reduction techniques, implicit surfaces,
+                    and related problems in physically based rendering.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2 justify-center md:justify-start">
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/nestor98"
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <img src="static/icons/github.svg" width="16" height="16" class="icon" alt="GitHub">
+                        <!-- <span class="text-sm">GitHub</span> -->
+                    </a>
+
+                    <!-- Scholar -->
+                    <a href="https://scholar.google.com/citations?user=qMFYJyMAAAAJ"
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <img src="static/icons/google-scholar.svg" width="16" height="16" class="icon" alt="Scholar">
+                        <!-- <span class="text-sm">Scholar</span> -->
+                    </a>
+
+                    <!-- ORCID -->
+                    <a href="https://orcid.org/0000-0002-5323-3233"
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <img src="static/icons/orcid.svg" width="16" height="16" class="icon" alt="ORCID">
+                        <!-- <span class="text-sm">ORCID</span> -->
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:nmonzon@unizar.es"
+                    class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                        <img src="static/icons/envelope.svg" width="16" height="16" class="icon" alt="Email">
+                        <!-- <span class="text-sm">Email</span> -->
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+        
+
+<section id="publications" class="scroll-mt-24">
+    <!--        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-6">-->
+    <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-slate-800 pb-2">
+        Publications
+    </h2>
+
+    <div class="divide-y divide-slate-200 dark:divide-slate-700">
+<!--         
+        <div class="py-8">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div style="flex:0 0 25%;">
+                    <img src="static/images/egsr26_teaser.png" class="paper-image" alt="EGSR 2026 teaser">
+                </div>
+                <div style="flex:0 0 75%;">
+                    <h3 class="paper-title">
+                        <a href="https://graphics.unizar.es/projects/EG24Underwater/" class="paper-link">
+                            One-more-vertex Next-Event Estimation with Hierarchical Geometry Sampling
+                        </a>
+                    </h3>
+                    <p class="venue">Computer Graphics Forum (EGSR 2026)</p>
+                    <p class="author-list">
+                        <a href="https://jgarciapueyo.github.io/" class="hover:underline">Jorge Garcia Pueyo</a>*,
+                        <span class="font-bold text-primary-light dark:text-primary-dark">Nestor Monzon</span>*,
+                        <a href="https://orcid.org/0000-0001-9000-0466" class="hover:underline">Adrian Jarabo</a>,
+                        <a href="http://adolfo-munoz.com/" class="hover:underline">Adolfo Muñoz</a>
+                    </p>
+                    <p class="paper-description">
+                        * Equal contribution
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.15009" class="button-chip">PDF</a>
+                        <a href="https://graphics.unizar.es/projects/EG24Underwater/" class="button-chip">Project Page</a>
+                        <a href="https://youtu.be/x6JQNNJBJyA?list=TLGGxu1EqFf3Yp0yMjA3MjAyNA" class="button-chip">Video</a>
+                        <a href="https://www.shadertoy.com/view/4cVGD3" class="button-chip">Shadertoy</a>
+                        <a href="https://doi.org/10.1111/cgf.15009" class="button-chip">DOI</a>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Paper 1 -->
+        <div class="py-8">
+            <div class="flex flex-col md:flex-row gap-6">
+
+                <!-- Teaser -->
+                <div style="flex:0 0 25%;">
+                    <img src="static/images/siga24_teaser.jpg"
+                         alt="Polarimetric BSSRDF Acquisition of Dynamic Faces teaser"
+                         class="paper-image">
+                </div>
+                <div style="flex:0 0 75%;">
+                    <h3 class="paper-title">
+                        <a href="https://vclab.kaist.ac.kr/siggraphasia2024/index.html" class="paper-link">
+                            Polarimetric BSSRDF Acquisition of Dynamic Faces
+                        </a>
+                    </h3>
+                    <p class="venue">
+                        ACM Transactions on Graphics (TOG), presented at SIGGRAPH Asia 2024
+                    </p>
+                    <p class="author-list">
+                        <a href="https://vclab.kaist.ac.kr/hhha/" class="hover:underline">Hyunho Ha</a>,
+                        <a href="https://vclab.kaist.ac.kr/ishwang/index.html" class="hover:underline">Inseung Hwang</a>,
+                        <span class="font-bold text-primary-light dark:text-primary-dark">Nestor Monzon</span>,
+                        <a href="https://vclab.kaist.ac.kr/jmcho/index.html" class="hover:underline">Jaemin Cho</a>,
+                        <a href="https://vclab.kaist.ac.kr/dgkim/" class="hover:underline">Donggun Kim</a>,
+                        <a href="https://www.shbaek.com/" class="hover:underline">Seung-Hwan Baek</a>,
+                        <a href="https://webdiis.unizar.es/~amunoz" class="hover:underline">Adolfo Muñoz</a>,
+                        <a href="http://giga.cps.unizar.es/~diegog" class="hover:underline">Diego Gutierrez</a>,
+                        <a href="https://vclab.kaist.ac.kr/minhkim/" class="hover:underline">Min H. Kim</a>
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <a href="https://vclab.kaist.ac.kr/siggraphasia2024/polar-face-main.pdf" class="button-chip">PDF</a>
+                        <a href="https://vclab.kaist.ac.kr/siggraphasia2024/index.html" class="button-chip">Project Page</a>
+                        <a href="https://github.com/KAIST-VCLAB/polarimetric-bssrdf-dynamic-face" class="button-chip">Code&Data</a>
+                        <a href="https://doi.org/10.1145/3687767" class="button-chip">DOI</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="py-8">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div style="flex:0 0 25%;">
+                    <img src="static/images/eg24_teaser.png" class="paper-image" alt="Real-Time Underwater Spectral Rendering teaser">
+                </div>
+                <div style="flex:0 0 75%;">
+                    <h3 class="paper-title">
+                        <a href="https://graphics.unizar.es/projects/EG24Underwater/" class="paper-link">
+                            Real-Time Underwater Spectral Rendering
+                        </a>
+                    </h3>
+                    <p class="venue">Computer Graphics Forum (Eurographics 2024)</p>
+                    <p class="author-list">
+                        <span class="font-bold text-primary-light dark:text-primary-dark">Nestor Monzon</span>,
+                        <a href="http://giga.cps.unizar.es/~diegog/" class="hover:underline">Diego Gutierrez</a>,
+                        <a href="https://www.deryaakkaynak.com/" class="hover:underline">Derya Akkaynak</a>,
+                        <a href="https://webdiis.unizar.es/~amunoz" class="hover:underline">Adolfo Muñoz</a>
+                    </p>
+                    <p class="paper-description">
+                        We present a simplification of multiple scattering as a function of depth that allows for real-time underwater spectral rendering.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.15009" class="button-chip">PDF</a>
+                        <a href="https://graphics.unizar.es/projects/EG24Underwater/" class="button-chip">Project Page</a>
+                        <a href="https://youtu.be/x6JQNNJBJyA?list=TLGGxu1EqFf3Yp0yMjA3MjAyNA" class="button-chip">Video</a>
+                        <a href="https://www.shadertoy.com/view/4cVGD3" class="button-chip">Shadertoy</a>
+                        <a href="https://doi.org/10.1111/cgf.15009" class="button-chip">DOI</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <section id="supervision" class="scroll-mt-24">
+            <h2 class="section-title">Supervision</h2>
+            
+          
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Techniques for Real-Time Spectral Rendering" 
+                              author="[Pedro J. Pérez](https://pedroperez14.github.io)"
+                              subtitle="Feb-Jul 2024 | Masters in Robotics, Graphics and Computer Vision" -->
+                <div class="card">
+                    <span class="tag-bachelor">Bachelor's Thesis (Computer Engineering)</span>
+                    <h3 class="supervision-title">
+                        Real-time rendering engine for implicit surfaces using sparse structures
+                    </h3>
+                    <p class="supervision-author">
+                        <a href="https://victorr.me" class="link-primary">Victor Orrios</a>
+                    </p>
+                    <p class="supervision-period">Feb 2026 - Present</p>
+                </div>
+                <div class="card">
+                    <span class="tag-bachelor">Bachelor's Thesis (Computer Engineering)</span>
+                    <h3 class="supervision-title">
+                        Study of variance reduction techniques to accelerate convergence in Monte Carlo rendering
+                    </h3>
+                    <p class="supervision-author"><a class="link-primary">Miguel Angel Luquin</a></p>
+                    <p class="supervision-period">Feb 2026 - Present</p>
+                </div>
+                <div class="card">
+                    <span class="tag-master">Master's Thesis (Robotics, Graphics and Computer Vision)</span>
+                    <h3 class="supervision-title">Techniques for Real-Time Spectral Rendering</h3>
+                    <p class="supervision-author"><a href="https://pedroperez14.github.io" class="link-primary">Pedro J. Pérez</a></p>
+                    <p class="supervision-period">Feb-Jul 2024</p>
+                </div>
+            </div>
+        </section>
+        <!-- End of Supervision -->
+
+        <section id="teaching" class="scroll-mt-24">
+            <h2 class="section-title">Teaching</h2>
+            
+            <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700">
+                <table class="w-full text-left border-collapse min-w-[500px]">
+                    <thead class="bg-slate-100 dark:bg-slate-800/50">
+                        <tr>
+                            <th class="table-heading">Subject</th>
+                            <th class="table-heading">Degree</th>
+                            <th class="table-heading">Period(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white dark:bg-slate-800">
+                        <tr class="table-row">
+                            <td class="table-cell-title">Modeling and Simulation of Appearance</td>
+                            <td class="table-cell-small">
+                                <a href="https://estudios.unizar.es/estudio/ver?id=713" class="hover:text-primary-light dark:hover:text-primary-dark hover:underline transition-colors">
+                                            Master in Robotics, Graphics and Computer Vision
+                                        </a></td>
+                            <td class="table-cell-small">Fall 2024, 2025, 2026</td>
+                        </tr>
+                        <tr class="table-row-last">
+                            <td class="table-cell-title">Computational Imaging</td>
+                            <td class="table-cell-small">
+                                <a href="https://estudios.unizar.es/estudio/ver?id=713" class="hover:text-primary-light dark:hover:text-primary-dark hover:underline transition-colors">
+                                    Master in Robotics, Graphics and Computer Vision
+                                </a>
+                            </td>
+                            <td class="table-cell-small">Spring 2026, 2027</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- End of Teaching -->
+
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 mt-8 py-8 text-center text-slate-500 dark:text-slate-400 text-sm">
+        <p>&copy; 2026 Nestor Monzon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

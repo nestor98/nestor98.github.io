@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "./**/*.{html,js}";
+
+@theme {
+  --color-primary-light: #1e3a8a;
+  --color-primary-dark: #55aaaa;
+}
+@layer components {
+
+  .icon {
+    @apply brightness-0 dark:invert;
+  }
+
+  /* ---------- Generic links ---------- */
+
+  .link-primary {
+    @apply font-semibold text-primary-light dark:text-primary-dark hover:underline;
+  }
+
+  .link-hover {
+    @apply transition-colors hover:text-primary-light dark:hover:text-primary-dark;
+  }
+
+  .nav-link {
+    @apply font-medium transition-colors
+           hover:text-primary-light dark:hover:text-primary-dark;
+  }
+
+  /* ---------- Section titles ---------- */
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold mb-8 text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-slate-800 pb-2;
+
+           /*     <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-slate-800 pb-2">
+ */
+  }
+
+  /* ---------- Cards ---------- */
+
+  .card {
+    @apply bg-white dark:bg-slate-800
+           p-4 md:p-5
+           rounded-xl
+           border border-slate-100 dark:border-slate-700;
+  }
+
+  /* ---------- Publication buttons ---------- */
+
+  .button-chip {
+    @apply px-3 py-1
+           text-xs
+           rounded-md
+           border border-slate-300 dark:border-slate-700
+           hover:bg-slate-100 dark:hover:bg-slate-800;
+  }
+
+  /* ---------- Table rows ---------- */
+
+  .table-row {
+    @apply border-b border-slate-100 dark:border-slate-700
+           hover:bg-slate-50 dark:hover:bg-slate-700/50
+           transition-colors;
+  }
+
+  .table-row-last {
+    @apply hover:bg-slate-50 dark:hover:bg-slate-700/50
+           transition-colors;
+  }
+
+  /* ---------- Table cells ---------- */
+
+  .table-heading {
+    @apply p-3 md:p-4
+           font-semibold
+           border-b border-slate-200 dark:border-slate-700;
+  }
+
+  .table-cell {
+    @apply p-3 md:p-4;
+  }
+
+  .table-cell-small {
+    @apply p-3 md:p-4
+           text-xs md:text-sm
+           text-slate-600 dark:text-slate-400;
+  }
+
+  .table-cell-title {
+    @apply p-3 md:p-4
+           font-medium
+           text-sm md:text-base;
+  }
+
+  /* ---------- Author lines ---------- */
+
+  .author-list {
+    @apply mt-2
+           text-sm
+           text-slate-600 dark:text-slate-300
+           leading-relaxed;
+  }
+
+  .venue {
+    @apply mt-1
+           text-sm
+           font-semibold
+           text-slate-500 dark:text-slate-400;
+  }
+
+  .paper-description {
+    @apply mt-2
+           text-sm
+           text-slate-500 dark:text-slate-400;
+  }
+
+  /* ---------- Tags ---------- */
+@layer components {
+
+.tag-bachelor {
+  @apply inline-block px-2 py-1 text-xs font-semibold rounded mb-2
+         text-green-800 dark:text-green-200;
+}
+
+.tag-master {
+  @apply inline-block px-2 py-1 text-xs font-semibold rounded mb-2
+         text-blue-800 dark:text-blue-300;
+}
+  
+}
+
+  /* ---------- Supervision cards ---------- */
+
+  .supervision-title {
+    @apply font-bold text-lg mb-1;
+  }
+
+  .supervision-author {
+    @apply text-sm mb-1;
+  }
+
+  .supervision-period {
+    @apply text-sm;
+  }
+
+  /* ---------- Publication titles ---------- */
+
+  .paper-title {
+    @apply text-xl
+           font-bold
+           leading-snug;
+  }
+
+  .paper-link {
+    @apply transition-colors
+           hover:text-primary-light dark:hover:text-primary-dark;
+  }
+
+  /* ---------- Layout ---------- */
+
+  .container-main {
+    @apply max-w-5xl mx-auto
+           px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply space-y-16 md:space-y-24;
+  }
+
+  /* ---------- Images ---------- */
+
+  .paper-image {
+    @apply w-full rounded-lg;
+  }
+
+  .profile-image {
+    @apply w-60 h-60 md:w-48 md:h-48
+           rounded-xl
+           object-cover
+           shadow-lg
+           bg-slate-200 dark:bg-slate-800
+           shrink-0;
+  }
+}
