@@ -148,7 +148,17 @@
   /* ---------- Publication titles ---------- */
 
   .paper-title {
+    @apply text-lg
+           font-bold
+           leading-snug;
+  }
+    /* .paper-title {
     @apply text-xl
+           font-bold
+           leading-snug;
+  } */
+  .paper-title-smaller {
+    @apply text-lg
            font-bold
            leading-snug;
   }
