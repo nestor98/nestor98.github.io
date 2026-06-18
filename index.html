@@ -168,7 +168,11 @@
         <div class="py-8">
             <div class="flex flex-col md:flex-row md:items-center gap-6">
                 <div style="flex:0 0 25%;" class="flex items-center">
-                    <img src="static/images/egsr26_teaser.png" class="paper-image w-full h-auto" alt="EGSR 2026 teaser">
+                    <img src="static/images/egsr26_teaser.png" 
+                        class="paper-image w-full h-auto" 
+                        style="cursor: zoom-in;" 
+                        alt="EGSR 2026 teaser" 
+                        onclick="openLightbox(this.src)">              
                 </div>
                 <div style="flex:0 0 75%;">
                     <h3 class="paper-title">
@@ -210,9 +214,12 @@
 
                 <!-- Teaser -->
                 <div style="flex:0 0 25%;" class="flex items-center">
-                    <img src="static/images/siga24_teaser.jpg"
-                         alt="Polarimetric BSSRDF Acquisition of Dynamic Faces teaser"
-                         class="paper-image">
+                    
+                    <img src="static/images/siga24_teaser.jpg" 
+                        class="paper-image w-full h-auto" 
+                        style="cursor: zoom-in;" 
+                        alt="Polarimetric BSSRDF Acquisition of Dynamic Faces teaser" 
+                        onclick="openLightbox(this.src)">       
                 </div>
                 <div style="flex:0 0 75%;">
                     <h3 class="paper-title">
@@ -249,7 +256,11 @@
         <div class="py-8">
             <div class="flex flex-col md:flex-row gap-6">
                 <div style="flex:0 0 25%;" class="flex items-center">
-                    <img src="static/images/eg24_teaser.png" class="paper-image w-full h-auto" alt="Real-Time Underwater Spectral Rendering teaser">
+                    <img src="static/images/eg24_teaser.png" 
+                        class="paper-image w-full h-auto" 
+                        style="cursor: zoom-in;" 
+                        alt="Real-Time Underwater Spectral Rendering teaser" 
+                        onclick="openLightbox(this.src)">       
                 </div>
                 <div style="flex:0 0 75%;">
                     <h3 class="paper-title">
@@ -360,7 +371,14 @@
     <footer class="border-t border-slate-200 dark:border-slate-800 mt-8 py-8 text-center text-slate-500 dark:text-slate-400 text-sm">
         <p>&copy; 2026 Nestor Monzon. All rights reserved.</p>
     </footer>
-
+    
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" 
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center; backdrop-filter: blur(4px); cursor: zoom-out;" 
+        class="p-4 transition-opacity" 
+        onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Expanded paper teaser" class="max-w-full max-h-full object-contain rounded shadow-2xl">
+    </div>
     <script>
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
@@ -369,6 +387,30 @@
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+        }
+
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            // Set the image source
+            lightboxImg.src = src;
+            
+            // Use inline flex to ensure it centers the image correctly
+            lightbox.style.display = 'flex';
+            
+            // Lock background scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            
+            // Hide the lightbox
+            lightbox.style.display = 'none';
+            
+            // Restore background scrolling
+            document.body.style.overflow = '';
         }
     </script>
 </body>
