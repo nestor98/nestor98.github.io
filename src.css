@@ -8,6 +8,11 @@
   --color-primary-light: #1e3a8a;
   --color-primary-dark: #55aaaa;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
 
   .icon {
