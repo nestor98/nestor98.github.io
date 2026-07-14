@@ -348,7 +348,8 @@
                             <td class="table-cell-small">
                                 <a href="https://estudios.unizar.es/estudio/ver?id=713" class="hover:text-primary-light dark:hover:text-primary-dark hover:underline transition-colors">
                                             Master in Robotics, Graphics and Computer Vision
-                                        </a></td>
+                                </a>
+                            </td>
                             <td class="table-cell-small">Fall 2024, 2025, 2026</td>
                         </tr>
                         <tr class="table-row-last">
@@ -392,23 +393,18 @@
         function openLightbox(src) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-            
             // Set the image source
             lightboxImg.src = src;
-            
             // Use inline flex to ensure it centers the image correctly
             lightbox.style.display = 'flex';
-            
             // Lock background scrolling
             document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
-            
             // Hide the lightbox
             lightbox.style.display = 'none';
-            
             // Restore background scrolling
             document.body.style.overflow = '';
         }
