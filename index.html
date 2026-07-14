@@ -195,15 +195,8 @@
                         <a href="https://graphics.unizar.es/projects/OneMoreVertex26/" class="button-chip">Project Page</a>
                         <a href="https://github.com/jgarciapueyo/OneMoreVertexNEEHierarchicalGeometrySampling" class="button-chip">Code</a>
                         <a href="https://graphics.unizar.es/projects/OneMoreVertex26/static/omv_nee.bib" class="button-chip">Bibtex</a>
-
-
-
-                        <!-- <a href="https://youtu.be/x6JQNNJBJyA?list=TLGGxu1EqFf3Yp0yMjA3MjAyNA" class="button-chip">Video</a> -->
-                        <!-- <a href="https://www.shadertoy.com/view/4cVGD3" class="button-chip">Shadertoy</a>
-                        <a href="https://doi.org/10.1111/cgf.15009" class="button-chip">DOI</a> -->
-
+                        <a href="https://doi.org/10.1111/cgf.70539" class="button-chip">DOI</a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -310,7 +303,7 @@
                     <p class="supervision-author">
                         <a href="https://victorr.me" class="link-primary">Victor Orrios</a>
                     </p>
-                    <p class="supervision-period">Feb 2026 - Present</p>
+                    <p class="supervision-period">Feb-Jul 2026</p>
                 </div>
                 <div class="card">
                     <span class="tag-bachelor">Bachelor's Thesis<span class="text-slate-900 dark:text-slate-400"> · Computer Engineering </span></span>
@@ -318,7 +311,7 @@
                         Study of variance reduction techniques to accelerate convergence in Monte Carlo rendering
                     </h3>
                     <p class="supervision-author"><a class="link-primary">Miguel Angel Luquin</a></p>
-                    <p class="supervision-period">Feb 2026 - Present</p>
+                    <p class="supervision-period">Feb-Jul 2026</p>
                 </div>
                 <div class="card">
                     <span class="tag-master">Master's Thesis <span class="text-slate-900 dark:text-slate-400">· Robotics, Graphics and Computer Vision</span></span>
@@ -373,13 +366,17 @@
         <p>&copy; 2026 Nestor Monzon. All rights reserved.</p>
     </footer>
     
-    <!-- Lightbox Overlay -->
     <div id="lightbox" 
-        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center; backdrop-filter: blur(4px); cursor: zoom-out;" 
-        class="p-4 transition-opacity" 
-        onclick="closeLightbox()">
-        <img id="lightbox-img" src="" alt="Expanded paper teaser" class="max-w-full max-h-full object-contain rounded shadow-2xl">
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: rgba(0, 0, 0, 0.9); align-items: center; justify-content: center; backdrop-filter: blur(4px); cursor: zoom-out;" 
+    class="p-4 transition-opacity" 
+    onclick="closeLightbox()">
+    
+    <img id="lightbox-img" 
+         src="" 
+         alt="Expanded paper teaser" 
+         class="lightbox-responsive-img rounded shadow-2xl">
     </div>
+
     <script>
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
@@ -403,8 +400,14 @@
 
         function closeLightbox() {
             const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
             // Hide the lightbox
             lightbox.style.display = 'none';
+            
+            // Fixed: Reset the src attribute so the old image doesn't flash next time a new one loads
+            lightboxImg.src = '';
+            
             // Restore background scrolling
             document.body.style.overflow = '';
         }
